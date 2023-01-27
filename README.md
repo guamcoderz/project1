@@ -3,9 +3,9 @@ Pygame Zero Test Project
 This is a test project used to get familiar with getting your environment set up and using git commands.
 
 It contains instructions to:
-* Clone a Github project.
 * Set up your local environment.
 * Get familiar with common git commands such as:
+  * Clone a Github project
   * Creating a new branch
   * Commit a new file
   * Create a pull request
@@ -13,30 +13,44 @@ It contains instructions to:
 
 Note: This tutorial is based on Mac or Linux based environments. The Windows commands may slightly differ.
 
-Cloning the Project
+Setting up Your Local Environment
+========================
+Installing Conda and Creating Your Environment
 ------------------------
 First, open up your terminal or command line.
 Navigate to your directory you want to save the project files to.
 For example:
 ```
-cd Document/PythonProjects
-```
-Next, clone the file into that directory.
-```
-git clone https://github.com/guamcoderz/project1.git
-cd project1
+cd ~
+mkdir PythonProjects
+cd PythonProjects
 ```
 
-Setting up Your Local Environment
-----------------
 I highly recommend installing [Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html), which will help you create a programming environment for Python projects.
-Once installed, you can run the following commands from the root directory of the repository:
+Once installed, you can run the following commands from the directory you created:
 ```
 conda create --name pygamezero
 conda install -n pygamezero pip
 conda activate pygamezero
+```
+Installing GitHub CLI
+------------------------
+Install GitHub CLI with Conda and login to your GitHub account.
+```
+conda install gh --channel conda-forge
+gh auth login -w
+```
+
+Cloning the Project
+------------------------
+```
+gh repo clone guamcoderz/project1
+cd project1
 pip install -r requirements.txt
 ```
+
+Setting Up Your IDE
+------------------------
 Next, comes the discussion of which Python IDE to use. I personally use [PyCharm](https://www.jetbrains.com/pycharm/download/) in developing Python projects, but whatever IDE you end up choosing, be sure that it contains git functionality to make it easier to add files to commit and make pull requests.
 
 Open up your project in your IDE of choice by selecting the directory you just cloned.
@@ -46,8 +60,21 @@ Run the main.py file to make sure that your local environment was set up correct
 
 Getting Familiar with Git
 ========================
-Now that your local environment is set up, you will need to create a new branch for your development. Do not make any changes to the code until you do this!
+Creating a Dev Branch
+------------------------
+Now that your local environment is set up, you will need to create a new branch for your development. Do not make any changes to the code until you do this! In your terminal or in your IDE, create a new branch called `dev-[github_username]`:
 ```
-git branch dev
-git checkout dev
+git branch dev-aznleng
+git checkout dev-aznleng
+```
+Now, open the `team.csv` file and add a new line with your name, email address, and GitHub username.
+If using the command line, you can enter the following to open up the file and make edits:
+```
+nano team.csv
+```
+Press CTRL+X to save and close the file. Once the change has been made, in your command line, you are going to add and commit the changes to your dev branch. Be sure to change `dev-aznleng` to the name of your branch.
+```
+git add team.csv
+git commit -m "Add my info to team file.
+git push --set-upstream origin dev-aznleng
 ```
