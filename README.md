@@ -67,6 +67,8 @@ Now that your local environment is set up, you will need to create a new branch 
 git branch dev-aznleng
 git checkout dev-aznleng
 ```
+Editing a File and Committing It
+------------------------
 Now, open the `team.csv` file and add a new line with your name, email address, and GitHub username.
 If using the command line, you can enter the following to open up the file and make edits:
 ```
@@ -75,6 +77,10 @@ nano team.csv
 Press CTRL+X to save and close the file. Once the change has been made, in your command line, you are going to add and commit the changes to your dev branch. Be sure to change `dev-aznleng` to the name of your branch.
 ```
 git add team.csv
-git commit -m "Add my info to team file.
+git commit -m "Add my info to team file."
 git push --set-upstream origin dev-aznleng
 ```
+Creating a Pull Request and Merging
+------------------------
+On GitHub in the web browser, go to the [Pull Request](https://github.com/guamcoderz/project1/pulls) page. Click on the button for New Pull Request. Select `main` as the base and your dev branch as compare. Next, click on the button to Create Pull Request. Finally, you will merge the pull request by click on the Merge Pull Request button.
+
