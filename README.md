@@ -1,5 +1,5 @@
 Pygame Zero Test Project
-------------------------
+========================
 This is a test project used to get familiar with getting your environment set up and using git commands.
 
 It contains instructions to:
@@ -14,9 +14,8 @@ It contains instructions to:
 Note: This tutorial is based on Mac or Linux based environments. The Windows commands may slightly differ.
 
 Setting up Your Local Environment
-========================
-Installing Conda and Creating Your Environment
 ------------------------
+### Installing Conda and Creating Your Environment
 First, open up your terminal or command line.
 Navigate to your directory you want to save the project files to.
 For example:
@@ -33,24 +32,21 @@ conda create --name pygamezero
 conda install -n pygamezero pip
 conda activate pygamezero
 ```
-Installing GitHub CLI
-------------------------
+### Installing GitHub CLI
 Install GitHub CLI with Conda and login to your GitHub account.
 ```
 conda install gh --channel conda-forge
 gh auth login -w
 ```
 
-Cloning the Project
-------------------------
+### Cloning the Project
 ```
 gh repo clone guamcoderz/project1
 cd project1
 pip install -r requirements.txt
 ```
 
-Setting Up Your IDE
-------------------------
+### Setting Up Your IDE
 Next, comes the discussion of which Python IDE to use. I personally use [PyCharm](https://www.jetbrains.com/pycharm/download/) in developing Python projects, but whatever IDE you end up choosing, be sure that it contains git functionality to make it easier to add files to commit and make pull requests.
 
 Open up your project in your IDE of choice by selecting the directory you just cloned.
@@ -59,16 +55,14 @@ You will need to make sure that the correct Python Interpreter is set to the con
 Run the main.py file to make sure that your local environment was set up correctly. You should see a window pop up with a bird flapping its wings moving to the right in an endless cycle. Click on the bird to see what it does.
 
 Getting Familiar with Git
-========================
-Creating a Dev Branch
 ------------------------
+### Creating a Dev Branch
 Now that your local environment is set up, you will need to create a new branch for your development. Do not make any changes to the code until you do this! In your terminal or in your IDE, create a new branch called `dev-[github_username]`:
 ```
 git branch dev-aznleng
 git checkout dev-aznleng
 ```
-Editing a File and Committing It
-------------------------
+### Editing a File and Commit
 Now, open the `team.csv` file and add a new line with your name, email address, and GitHub username.
 If using the command line, you can enter the following to open up the file and make edits:
 ```
@@ -80,7 +74,6 @@ git add team.csv
 git commit -m "Add my info to team file."
 git push --set-upstream origin dev-aznleng
 ```
-Creating a Pull Request and Merging
-------------------------
+### Creating a Pull Request and Merging
 On GitHub in the web browser, go to the [Pull Request](https://github.com/guamcoderz/project1/pulls) page. Click on the button for New Pull Request. Select `main` as the base and your dev branch as compare. Next, click on the button to Create Pull Request. Finally, you will merge the pull request by click on the Merge Pull Request button.
 
