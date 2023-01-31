@@ -16,6 +16,7 @@ Note: This tutorial is based on Mac or Linux based environments. The Windows com
 Setting up Your Local Environment
 ------------------------
 ### Installing Conda and Creating Your Environment
+[#todo: Write instructions for Windows computers.]
 First, open up your terminal or command line.
 Navigate to your directory you want to save the project files to.
 For example:
@@ -32,9 +33,10 @@ conda create --name pygamezero
 conda install -n pygamezero pip
 conda activate pygamezero
 ```
-### Installing GitHub CLI
+### Installing Git and GitHub CLI
 Install GitHub CLI with Conda and login to your GitHub account.
 ```
+conda install git
 conda install gh --channel conda-forge
 gh auth login -w
 ```
